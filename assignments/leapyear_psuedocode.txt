@@ -1,0 +1,7 @@
+start
+input year
+if year % 400 or year % 4 and year % 100 != 0:
+	output "leap year"
+	exit
+output "not a leap year"
+exit
