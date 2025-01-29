@@ -300,6 +300,57 @@ public class Hello {
         System.out.println(arr[2][2]);
     }
 
+    // Methods in Java
+    // By assigning a method to a static it will only depends on the class and can be accessed in the main method within the class
+    // it will not have the access for the object instance which is declared
+    static void myMethod(String fname, int age) {
+        System.out.println("this is a static method");
+        System.out.println(fname + " Mohamed is "+ age);
+    }
+
+    // check age method to pass the arguments in the methods in java
+    static void checkAge(int age) {
+        if (age >= 18) {
+            System.out.println("You're Eliible for voting");
+        } else {
+            System.out.println("you're not eligible for voting");
+        }
+    }
+
+    // to add two numbers which declaring the functions return type as primitive data types
+    static int addTwoNum(int x) {
+        return 2 + x;
+    }
+
+    // Method Overloading in java
+    // we can use the same method name again and agin as far as the it is defining with different types 
+    static int plusMethod(int x, int y){
+        return x + y;
+    }
+
+    // we can declare the same with the different types of parameters
+    static double plusMethod(double x, double y){
+        return x + y;
+    }
+
+    // recursion is method used to do when the method needs call itself to process the output'
+    static int recursive(int k) {
+        if(k > 0) {
+            return k + recursive(k - 1);
+        } else {
+            return 0;
+        }
+    }
+
+    // using recursion method to add a range of numbers
+    static int rangeRecursion(int start, int end) {
+        if(end > start) {
+            return end + rangeRecursion(start, end - 1);
+        } else {
+            return end;
+        }
+    }
+
     // main method this class will run first and execute overall all methods
     public static void main(String[] args) {
         System.out.println("HEllow world"); // printing and out statements
@@ -307,7 +358,7 @@ public class Hello {
 
         // Variables will declare with the datatypes of JAVA
         // which is also called as Datatypes of JAVA
-        Hello hello = new Hello();
+        Hello hello = new Hello(); // object instance for the class file, this is the same method for whereve we are declaring it
         hello.dataTypes();
         hello.areaOfRectangle(); // real life example for the vaiables
 
@@ -344,5 +395,36 @@ public class Hello {
 
         // Arrays in JAVA
         hello.ArrayMethod();
+
+        // calling method without creating an instance of an object
+        myMethod("", 0);
+        myMethod("",0);// it can be called multiple times in the main method
+        // arguments is passed in the below method calling
+        myMethod("Eliyas", 0); // this is a method which is used to declare with the parameters
+        myMethod("Eli", 26);// passing multiple arguments
+
+        // calling the check age method
+        checkAge(26);
+
+        // calling the method with return type of int to return an int type vaue
+        // default value of int is 0
+        // default value of string is null
+        // there is no undefined in the java
+        System.out.println(addTwoNum(5));
+
+        // calling the method overloading methods to identify the difference
+        int myNum1 = plusMethod(2, 3);
+        double myNum2 = plusMethod(1.2, 2.8);
+        System.out.println("int: " + myNum1);
+        System.out.println("Double: " + myNum2);
+
+
+        // calling the recursive method
+        int recursiveResult = recursive(5);
+        System.out.println(recursiveResult);
+
+        // calling recursion with a given range
+        int rangeRecursion = rangeRecursion(5, 10);
+        System.out.println(rangeRecursion);
     }
 }
