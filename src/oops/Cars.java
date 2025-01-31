@@ -1,6 +1,14 @@
 package oops;
 
 public class Cars {
+    int modelYear;
+    String modelName;
+
+    // Multiple parameter constructor defining
+    public Cars(int year, String model) {
+        modelYear = year;
+        modelName = model;
+    }
     
     // full throttle
     public void fullThrottle() {
@@ -13,8 +21,9 @@ public class Cars {
     }
 
     public static void main(String[] args) {
-        Cars cars = new Cars();
+        Cars cars = new Cars(2025, "Audi"); // assigniig the value of multiple input based on the constructor parameter defined
         cars.fullThrottle();
         cars.speed(225);
+        System.out.println("car Model Name: " + cars.modelName + ", year : " + cars.modelYear);
     }
 }
