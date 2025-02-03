@@ -3,5 +3,6 @@
         "src"
     ],
     "java.project.referencedLibraries": [],
-    "java.project.outputPath": "bin"
+    "java.project.outputPath": "bin",
+    "java.debug.settings.onBuildFailureProceed": true
 }

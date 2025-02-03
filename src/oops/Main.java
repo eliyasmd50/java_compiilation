@@ -1,6 +1,6 @@
 package oops;
 import java.util.Scanner; // importing just the Scanner class
-import java.util.*; // this is to import all the classes from this particular package/folder
+//import java.util.*; // this is to import all the classes from this particular package/folder
 
 public class Main {
     int x = 5; // attributes or fileds of a class

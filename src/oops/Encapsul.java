@@ -4,7 +4,7 @@ public class Encapsul {
     private String person; // person value is private and it cannot be accessed outside of the classes
     
     public String getName() {
-        return person; // this method is the only way for the classess to access the vlaue outside the class
+        return person; // this method is the only way for the clasess to access the value outside the class
     }
 
     public void setName(String newPerson) {

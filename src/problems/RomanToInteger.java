@@ -52,12 +52,16 @@ public class RomanToInteger {
             System.out.println(Arrays.toString(romanArr));
         }
 
+        // printing the values before doing the duplicate removal
+        System.out.println("Before Removal");
+        System.out.println(Arrays.toString(romanArr));
         // calling the dup
         newRomanArr = duplicateRemoval(romanArr);
+        System.out.println("After Removal");
         System.out.println(Arrays.toString(newRomanArr));
 
         for (int i =0; i < newRomanArr.length; i++) {
-            switch(romanArr[i]) {
+            switch(newRomanArr[i]) {
                 case "I":
                     val = 1;
                     break;
@@ -108,19 +112,29 @@ public class RomanToInteger {
     }
 
     static String[] duplicateRemoval(String[] romanArr) {
-        String[] newRomanArr = {}; // to initsialize the Array with the empty value and not null
+        String[] newRomanArray = new String[romanArr.length];// Initializing the new Array with default value 
+        int index = 0;
         for (String i : romanArr) {
-            if (i.length() == 1){
-                newRomanArr = new String[]{i}; // array cannot be declared after initialization, creating an instance of that array is the only way to declare again
-            } else if(Arrays.asList(newRomanArr).contains(i) == false && i.length() == 2) {
-                newRomanArr = new String[]{i};
+            if(i.length() != 1){
+                if(!Arrays.asList(newRomanArray).contains(i)){
+                    newRomanArray[index] = i;
+                    index++;
+                }
+            } else {
+                newRomanArray[index] = i;
+                index++;
             }
         }
-        System.out.println(Arrays.toString(newRomanArr));
-        return newRomanArr;
+
+        System.out.println("index" + index);
+        // this will have the new size of the Array
+        newRomanArray = Arrays.copyOf(newRomanArray, index); // Resizing the Array after removing the duplicates
+        System.out.println(Arrays.toString(newRomanArray));
+        return newRomanArray;
     }
+
     public static void main(String[] args){
-        int numericValue = romanToInt("MCMXCIV");
+        int numericValue = romanToInt("III");
         System.out.println(numericValue);
     }
 }

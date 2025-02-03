@@ -11,11 +11,20 @@ class Vehicle {
 
 class Car extends Vehicle {
     public int year = 2023; // defining Class Car own attributes
+}
+
+class Main {
     public static void main(String[] args) {
+        Car toyota = new Car();
+        System.out.println("Cars Model : "+ toyota.model);
+        System.out.println("Cars model Year : "+toyota.year);
+        System.out.println("Starting the car");
+        toyota.startVehicle();
+
+        // calling the parent class
         Vehicle vehicle = new Vehicle();// here i just called the parent class and i just called my sub class in the main file for understanding
         vehicle.startVehicle();// just calling the method of parent class we can access the attributes of parent class since it is defined in protected
     }
-    
 }
 
 // by defining the final keyword in the class it says that the Driver class is not inherited
