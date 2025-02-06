@@ -31,7 +31,7 @@ public class ValidParantheses {
 
     public static void main(String[] args) {
         ValidParantheses validParantheses = new ValidParantheses();
-        String parantheses = "()[]{}";
+        String parantheses = "([)]";
         System.out.println(validParantheses.isValid(parantheses));
     }
 
