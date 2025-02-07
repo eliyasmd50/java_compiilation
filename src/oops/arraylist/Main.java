@@ -17,7 +17,7 @@ public class Main {
         cars.add("Benz");
         cars.add("Fortuner");
         cars.add(1, "Honda"); // we can specify the exact index in the addition of an Array
-        System.out.println(cars);
+        System.out.println(cars); // [Maruti 800, Honda, BMW, Benz, Fortuner] as output
     }
 }
 
@@ -109,6 +109,7 @@ class LoopThroughArrayList {
 // Other types in the ArrayList
 class OtherTypes {
     public static void main(String[] args) {
+        // using characters types here
         ArrayList<Character> alphabets = new ArrayList<>();
         alphabets.add('a');
         alphabets.add('b');
@@ -130,6 +131,8 @@ class SortingAnArray {
         freedomYears.add("Gandhi");
         freedomYears.add("Nehru");
         System.out.println("Before sorting "+freedomYears);
+
+        // using collections package here for sorting the String
         Collections.sort(freedomYears); // sorting freedomYears
         System.out.println("After sorting "+freedomYears);
     }
@@ -148,6 +151,8 @@ class SortingNumbers {
         myIntValues.add(27);
 
         System.out.println("Values before Sorting" + myIntValues);
+
+        // Collections will also  do the sorting for Integers
         Collections.sort(myIntValues);// sorting the numbers
         System.out.println("Values After Sorting" + myIntValues);
     }
